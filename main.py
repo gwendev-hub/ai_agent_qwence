@@ -1,24 +1,26 @@
-from dotenv import load_dotenv
-from langchain_openai import ChatOpenAI
-import os
-import httpx
-import wincertstore
+from langchain_ollama.llms import OllamaLLM
+from langchain_core.prompts import ChatPromptTemplate
+from vector import retriever
 
-load_dotenv()
+model = OllamaLLM(model="llama3.2") #change to older version
 
-client = httpx.Client(timeout=30)
+template = """
+You are an exeprt in answering questions about a pizza restaurant
 
-llm = ChatOpenAI(model="gpt-5-nano",
-                 api_key=os.getenv("OPENAI_API_KEY"),
-                  http_client=client, )
+Here are some relevant reviews: {reviews}
 
+Here is the question to answer: {question}
+"""
+prompt = ChatPromptTemplate.from_template(template)
+chain = prompt | model
 
-response = llm.invoke("What is the capital of France?")
-print(response.content)
-
-#Fails because of proxy certificate issue, firewall from cap
-
-
-# Test
-# resp = httpx.get("https://www.google.com", timeout=15)
-# print(resp.status_code, resp.headers.get("server"))
+while True:
+    print("\n\n-------------------------------")
+    question = input("Ask your question (q to quit): ")
+    print("\n\n")
+    if question == "q":
+        break
+    
+    reviews = retriever.invoke(question)
+    result = chain.invoke({"reviews": reviews, "question": question})
+    print(result)
