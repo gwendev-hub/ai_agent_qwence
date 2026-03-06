@@ -1,0 +1,39 @@
+Project name: mini autonomous data warehouse builder
+
+Description:
+Two AI agents using openai or ollama to read, tranform and save new schema and table(s), that are then visualized and conluded
+
+Architecture idea for ai pipeline:
+
+1. Agent one - Data Egineer
+
+    Input: raw files (JSON, CSV, Excel, Parquet)
+
+    Responsibilities:
+    Detect file type
+    Infer schema
+    Normalize data
+    Create tables
+    Load into database / lakehouse
+
+    Outputs:
+
+    structured tables
+    schema description
+
+
+2. Agent two - Analyst
+
+    Input: structured tables
+
+    Responsibilities:
+    understand schema
+    generate python queries
+    compute metrics
+    produce charts
+    summarize trends
+
+    Outputs:
+    insights
+    visualizations
+    natural language explanations
