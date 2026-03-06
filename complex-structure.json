@@ -1,36 +1,98 @@
 {
-    "_credit": "This sample JSON file is provided by Sample-Files.com. Visit us for more sample files and resources.",
-    "project": "Sample JSON",
-    "version": 1.0,
-    "isActive": true,
-    "contributors": [
-        {
-            "id": 1,
-            "name": "Alice",
-            "roles": [
-                "developer",
-                "tester"
-            ]
+  "identifier": "gothenburg_transport_survey_2026_03",
+  "data": {
+    "survey_info": {
+      "title": "Public Transport Satisfaction Survey",
+      "city": "Gothenburg",
+      "year": 2026,
+      "anonymous": true,
+      "sponsor": null
+    },
+    "responses": [
+      {
+        "respondent_id": "R001",
+        "age": 28,
+        "resident": true,
+        "transport_modes_used": ["tram", "bus", "bike"],
+        "satisfaction": {
+          "overall_rating": 4.2,
+          "punctuality": 4,
+          "cleanliness": 3,
+          "coverage": 5
         },
-        {
-            "id": 2,
-            "name": "Bob",
-            "roles": [
-                "manager"
-            ]
+        "commute": {
+          "daily_minutes": 35,
+          "transfers": 1,
+          "uses_monthly_pass": true
+        },
+        "comments": "Trams are frequent but sometimes crowded.",
+        "suggestions": ["more night buses", "better bike parking"],
+        "metadata": {
+          "submitted_at": "2026-03-01T09:32:00Z",
+          "device": {
+            "type": "mobile",
+            "os": "Android"
+          }
         }
+      },
+      {
+        "respondent_id": "R002",
+        "age": 41,
+        "resident": true,
+        "transport_modes_used": ["bus", "car"],
+        "satisfaction": {
+          "overall_rating": 3.1,
+          "punctuality": 2,
+          "cleanliness": 4,
+          "coverage": 3
+        },
+        "commute": {
+          "daily_minutes": 50,
+          "transfers": 2,
+          "uses_monthly_pass": false
+        },
+        "comments": null,
+        "suggestions": [],
+        "metadata": {
+          "submitted_at": "2026-03-02T18:10:00Z",
+          "device": {
+            "type": "desktop",
+            "os": "Windows"
+          }
+        }
+      },
+      {
+        "respondent_id": "R003",
+        "age": 22,
+        "resident": false,
+        "transport_modes_used": ["tram"],
+        "satisfaction": {
+          "overall_rating": 4.8,
+          "punctuality": 5,
+          "cleanliness": 4,
+          "coverage": 4
+        },
+        "commute": {
+          "daily_minutes": 20,
+          "transfers": 0,
+          "uses_monthly_pass": true
+        },
+        "comments": "Very easy to navigate as a visitor.",
+        "suggestions": ["more English signage"],
+        "metadata": {
+          "submitted_at": "2026-03-04T12:45:00Z",
+          "device": {
+            "type": "tablet",
+            "os": "iOS"
+          }
+        }
+      }
     ],
-    "metadata": {
-        "created": "2023-01-01T12:00:00Z",
-        "tags": [
-            "sample",
-            "json",
-            "complex"
-        ],
-        "stats": {
-            "downloads": 1234,
-            "likes": 98,
-            "comments": null
-        }
+    "summary": {
+      "total_responses": 3,
+      "average_rating": 4.03,
+      "most_used_transport_modes": ["tram", "bus"],
+      "survey_open": false
     }
+  }
 }

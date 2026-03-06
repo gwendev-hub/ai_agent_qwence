@@ -1,0 +1,9 @@
+record_id,patient_id,age,gender,city,visited_facility,visit_type,wait_time_minutes,overall_rating,staff_friendliness_rating,facility_cleanliness_rating,insurance_used,follow_up_required,diagnosis_primary,diagnosis_secondary,medications_prescribed,telehealth_available,comments,visit_date
+HC001,P1001,34,Female,Gothenburg,Central Clinic,General Checkup,18,4.5,5,4,true,false,Seasonal Allergy,,Antihistamine,true,"Very friendly staff and quick service",2026-02-10
+HC002,P1002,52,Male,Gothenburg,Sahlgrenska Hospital,Emergency,75,3.2,3,4,true,true,Hypertension,High Cholesterol,ACE Inhibitor,false,"Long waiting time but good treatment",2026-02-12
+HC003,P1003,27,Female,Mölndal,Local Health Center,Dermatology,25,4.1,4,5,false,false,Eczema,,Topical Steroid,true,"Clean facility and clear instructions",2026-02-14
+HC004,P1004,41,Non-binary,Gothenburg,Central Clinic,General Checkup,30,3.8,4,3,true,false,Vitamin D Deficiency,,Vitamin D Supplement,true,,2026-02-15
+HC005,P1005,65,Male,Kungsbacka,Sahlgrenska Hospital,Cardiology,50,4.6,5,5,true,true,Arrhythmia,Hypertension,Beta Blocker,false,"Specialist was very knowledgeable",2026-02-18
+HC006,P1006,22,Female,Gothenburg,University Clinic,Mental Health,40,4.0,4,4,false,true,Anxiety,,SSRI,true,"Helpful consultation",2026-02-20
+HC007,P1007,38,Male,Partille,Local Health Center,Orthopedics,35,3.5,3,4,true,false,Knee Injury,,Pain Reliever,false,"Needed clearer recovery instructions",2026-02-21
+HC008,P1008,29,Female,Gothenburg,Central Clinic,Telehealth Consultation,10,4.7,5,4,false,false,Migraine,,Triptan,true,"Very convenient remote visit",2026-02-23
